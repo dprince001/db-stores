@@ -1,0 +1,373 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Sherpa Half Zip Jacket",
+      "imageUrl": "https://i.postimg.cc/RZKVqZV1/WMNSRECYCLEDSHERPAHALFZIP-EGRET-201-384-20424-3351.webp",
+      "price": 8000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "cream",
+        "black"
+      ],
+      "quantity": 3,
+      "category": "womens",
+      "available": true,
+      "gender": "f"
+    },
+    {
+      "id": "2",
+      "title": "Corona Flair Gown",
+      "imageUrl": "https://i.postimg.cc/gkpg1MLY/220505-UBB-Corona-Look-01-0352.webp",
+      "price": 12000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "blue",
+        "black"
+      ],
+      "quantity": 1,
+      "category": "womens",
+      "available": true,
+      "gender": "f"
+    },
+    {
+      "id": "3",
+      "title": "Ceramic Bowls",
+      "imageUrl": "https://i.postimg.cc/x1HBLkmC/707-328-03613-S-4-CERAMICBOWLS-2-7e02b58b-09a5-4e89-929c-21252eabe44a.webp",
+      "price": 5000,
+      "color": [
+        "cream",
+        "black"
+      ],
+      "quantity": 5,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "4",
+      "title": "Socks That Protect Oceans",
+      "imageUrl": "https://i.postimg.cc/7hGKDcM6/BCOCE002box.webp",
+      "price": 2500,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "white",
+        "black"
+      ],
+      "quantity": 7,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "5",
+      "title": "Cargo Pants",
+      "imageUrl": "https://i.postimg.cc/PJjMsxx6/F21-Apparel-Selects-22.webp",
+      "price": 15000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "ash",
+        "brown"
+      ],
+      "quantity": 1,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "6",
+      "title": "Bucket Hat",
+      "imageUrl": "https://i.postimg.cc/3rcq6jCN/F22-Accessories-163.webp",
+      "price": 5000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "grey",
+        "black",
+        "cream"
+      ],
+      "quantity": 4,
+      "category": "accessories",
+      "available": false
+    },
+    {
+      "id": "7",
+      "title": "Insulated Steel Bottle",
+      "imageUrl": "https://i.postimg.cc/x1r4j0ZS/F22-Accessories-17.webp",
+      "price": 4500,
+      "color": [
+        "blue"
+      ],
+      "quantity": 1,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "8",
+      "title": "KRD Hero Shoe",
+      "imageUrl": "https://i.postimg.cc/DznpsxFj/KRDASW-HERO.webp",
+      "price": 20000,
+      "sizes": {
+        "small": "42",
+        "medium": "43",
+        "large": "44",
+        "extralarge": "45"
+      },
+      "color": [
+        "brown",
+        "grey"
+      ],
+      "quantity": 2,
+      "category": "mens",
+      "available": false,
+      "gender": "m"
+    },
+    {
+      "id": "9",
+      "title": "Organic Curduroy Shirt",
+      "imageUrl": "https://i.postimg.cc/brgk794J/MENSORGANICBLOCKEDCORDUROYOVERSHIRTHAZELNUT-104-062-24625-9365-1.webp",
+      "price": 7000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "brown"
+      ],
+      "quantity": 5,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "10",
+      "title": "Organic Pocket Tee",
+      "imageUrl": "https://i.postimg.cc/bwJ9j4yj/MENSORGANICFIELDGUIDEPOCKETTEESMOKYOCHRE101-347-35125-9896.webp",
+      "price": 3000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "brown",
+        "blue"
+      ],
+      "quantity": 5,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "11",
+      "title": "Sherpa Half Zip Jacket",
+      "imageUrl": "https://i.postimg.cc/RZKVqZV1/WMNSRECYCLEDSHERPAHALFZIP-EGRET-201-384-20424-3351.webp",
+      "price": 8000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "cream",
+        "black"
+      ],
+      "quantity": 3,
+      "category": "womens",
+      "available": true,
+      "gender": "f"
+    },
+    {
+      "id": "12",
+      "title": "Corona Flair Gown",
+      "imageUrl": "https://i.postimg.cc/gkpg1MLY/220505-UBB-Corona-Look-01-0352.webp",
+      "price": 12000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "blue",
+        "black"
+      ],
+      "quantity": 1,
+      "category": "womens",
+      "available": true,
+      "gender": "f"
+    },
+    {
+      "id": "13",
+      "title": "Ceramic Bowls",
+      "imageUrl": "https://i.postimg.cc/x1HBLkmC/707-328-03613-S-4-CERAMICBOWLS-2-7e02b58b-09a5-4e89-929c-21252eabe44a.webp",
+      "price": 5000,
+      "color": [
+        "cream",
+        "black"
+      ],
+      "quantity": 5,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "14",
+      "title": "Socks That Protect Oceans",
+      "imageUrl": "https://i.postimg.cc/7hGKDcM6/BCOCE002box.webp",
+      "price": 2500,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "white",
+        "black"
+      ],
+      "quantity": 7,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "15",
+      "title": "Cargo Pants",
+      "imageUrl": "https://i.postimg.cc/PJjMsxx6/F21-Apparel-Selects-22.webp",
+      "price": 15000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "ash",
+        "brown"
+      ],
+      "quantity": 1,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "16",
+      "title": "Bucket Hat",
+      "imageUrl": "https://i.postimg.cc/3rcq6jCN/F22-Accessories-163.webp",
+      "price": 5000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "grey",
+        "black",
+        "cream"
+      ],
+      "quantity": 4,
+      "category": "accessories",
+      "available": false
+    },
+    {
+      "id": "17",
+      "title": "Insulated Steel Bottle",
+      "imageUrl": "https://i.postimg.cc/x1r4j0ZS/F22-Accessories-17.webp",
+      "price": 4500,
+      "color": [
+        "blue"
+      ],
+      "quantity": 1,
+      "category": "accessories",
+      "available": true
+    },
+    {
+      "id": "18",
+      "title": "KRD Hero Shoe",
+      "imageUrl": "https://i.postimg.cc/DznpsxFj/KRDASW-HERO.webp",
+      "price": 20000,
+      "sizes": {
+        "small": "42",
+        "medium": "43",
+        "large": "44",
+        "extralarge": "45"
+      },
+      "color": [
+        "brown",
+        "grey"
+      ],
+      "quantity": 2,
+      "category": "mens",
+      "available": false,
+      "gender": "m"
+    },
+    {
+      "id": "19",
+      "title": "Organic Curduroy Shirt",
+      "imageUrl": "https://i.postimg.cc/brgk794J/MENSORGANICBLOCKEDCORDUROYOVERSHIRTHAZELNUT-104-062-24625-9365-1.webp",
+      "price": 7000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "brown"
+      ],
+      "quantity": 5,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "20",
+      "title": "Organic Pocket Tee",
+      "imageUrl": "https://i.postimg.cc/bwJ9j4yj/MENSORGANICFIELDGUIDEPOCKETTEESMOKYOCHRE101-347-35125-9896.webp",
+      "price": 3000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "brown",
+        "blue"
+      ],
+      "quantity": 5,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    }
+  ],
+  "userEmails": [
+
+  ]
+}
