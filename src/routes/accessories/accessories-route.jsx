@@ -21,7 +21,7 @@ const Accessories = () => {
           </div>
         }
         {isPending && <span className="absolute left-[48%] top-[40%] animate-spin"><Spinner/></span>}
-        {error && <p>{error}</p>}
+        {/* {error && <p>{error}</p>} */}
       </div>
     </div>
   )
