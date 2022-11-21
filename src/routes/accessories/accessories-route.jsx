@@ -10,7 +10,7 @@ const Accessories = () => {
 
   return (
     <div>
-      <div className='w-[85%] mt-[20px] m-auto relative min-h-screen'>
+      <div className='w-[85%] mt-[20px] m-auto min-h-screen'>
         <p className='font-medium font-sans text-4xl'>Accessories</p>
         <FilterBarComp totalItems={data.length}/>
         {
@@ -20,8 +20,8 @@ const Accessories = () => {
           }
           </div>
         }
-        {isPending && <span className="absolute left-[48%] top-[40%] animate-spin"><Spinner/></span>}
-        {error && <p>{error}</p>}
+        {isPending && <span className="absolute left-[48%] top-[50%] animate-spin"><Spinner/></span>}
+        {/* {error && <p>{error}</p>} */}
       </div>
     </div>
   )

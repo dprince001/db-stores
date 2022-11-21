@@ -2,9 +2,10 @@ import {Link} from 'react-router-dom'
 
 const ShopItemComp = ({itemObj}) => {
     const {id, title, quantity, imageUrl, price, available} = itemObj;
+
   return (
     <div className='mt-[30px] group'>
-        <Link>
+        <Link to={`/product/${id}`}>
             <div className='relative overflow-hidden'>
                 <img src={imageUrl} className='group-hover:scale-125 transition-all duration-500'/>
 
@@ -13,7 +14,7 @@ const ShopItemComp = ({itemObj}) => {
             <div className='px-[10px]'>
                 <p className='font-inter text-sm font-extralight mt-[10px]'>DP STORES</p>
                 <p className='font-medium font-serif group-hover:underline'>{title}</p>
-                <p className='font-normal font-["sans-serif"]'>₦{price}</p>
+                {price && <p className='font-normal font-["sans-serif"]'>₦{price.toLocaleString()}</p>}
             </div>
         </Link>
     </div>

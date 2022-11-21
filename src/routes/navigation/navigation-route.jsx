@@ -2,6 +2,10 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import ReactRotatingText from 'react-rotating-text'
 
+import { useContext } from 'react'
+import { CartContext } from '../../contexts/cart-context/cart-context'
+
+
 import {ReactComponent as ProfileIcon} from '../../assets/user-icon.svg'
 import {ReactComponent as SearchIcon} from '../../assets/search-icon.svg'
 import {ReactComponent as CartIcon} from '../../assets/cart-icon.svg'
@@ -11,11 +15,21 @@ import FooterComp from '../../components/footer/footer-comp'
 
 
 const Navigation = () => {
+
+    const {isCartOpen, setIsCartOpen} = useContext(CartContext);
+
+    const handleCartClose = () => {
+        setIsCartOpen(!isCartOpen);
+    }
+
+    // console.log(isCartOpen)
+
+
   return (
     <div className='w-full'>
         <div className='bg-gradient-to-r from-blue to-lightgreen text-white h-[30px] z-10 sticky top-0 flex items-center justify-center'>
             <span className=''>
-                <ReactRotatingText items={['Free delivery for orders higher than ₦50,000', 'Pay on delivery available', 'Get 7% off your next purchase']} cursor={false} emptyPause={3000} pause={3000} typingInterval={50} deletingInterval={50}/>
+                <ReactRotatingText items={['Free delivery for orders higher than ₦20,000.00', 'Pay on delivery available', 'Get 7% off your next purchase']} cursor={false} emptyPause={3000} pause={3000} typingInterval={50} deletingInterval={50}/>
             </span>
         </div>
         <nav className='py-[30px] z-10 sticky top-[30px] bg-white'>
@@ -39,7 +53,7 @@ const Navigation = () => {
                     <Link to='/signin'>
                         <ProfileIcon/>
                     </Link>
-                    <CartIcon/>
+                    <CartIcon onClick={handleCartClose} className='cursor-pointer'/>
                 </div>
             </div>
         </nav>
