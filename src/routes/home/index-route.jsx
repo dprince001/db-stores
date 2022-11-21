@@ -10,7 +10,7 @@ const Index = () => {
 
 
   return (
-    <div className='w-[85%] mt-[20px] m-auto relative min-h-screen'>
+    <div className='w-[85%] mt-[20px] m-auto min-h-screen'>
       <p className='font-medium font-sans text-4xl'>New Arrivals</p>
       <FilterBarComp totalItems={data.length}/>
       {data && <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
@@ -18,7 +18,7 @@ const Index = () => {
           data.map(item => <ShopItemComp key={item.id} itemObj={item}/>)
         }
       </div>}
-      {isPending && <span className="absolute left-[48%] top-[40%] animate-spin"><Spinner/></span>}
+      {isPending && <span className="absolute left-[48%] top-[50%] animate-spin"><Spinner/></span>}
       {error && <p>{error}</p>}
     </div>
   )
