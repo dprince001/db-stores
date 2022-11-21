@@ -6,6 +6,7 @@ import WomensRoute from "./routes/womens/womens-route";
 import AccessoriesRoute from "./routes/accessories/accessories-route";
 import SignInRoute from "./routes/authentication/signin-route";
 import SignUpRoute from "./routes/authentication/signup-route";
+import ClickedProductRoute from "./routes/clicked-product/clicked-product-route";
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/accessories" element={<AccessoriesRoute />} />
         <Route path="/signin" element={<SignInRoute />} />
         <Route path="/signup" element={<SignUpRoute />} />
+        <Route path="/product/:productId" element={<ClickedProductRoute />} />
       </Route>
     </Routes>
   );
