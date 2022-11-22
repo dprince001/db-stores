@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 
 import { CartProvider } from './contexts/cart-context/cart-context';
+import { FilterProvider } from './contexts/filter-context/filter-context';
 
 
 import './index.css';
@@ -15,7 +16,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <CartProvider>
-        <App />
+        <FilterProvider>
+          <App />
+        </FilterProvider>
       </CartProvider>
     </BrowserRouter>
   </React.StrictMode>

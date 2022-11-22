@@ -4,10 +4,10 @@ import ReactRotatingText from 'react-rotating-text'
 
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/cart-context/cart-context'
+import CheckoutComp from '../../components/checkout/checkout-comp'
 
 
 import {ReactComponent as ProfileIcon} from '../../assets/user-icon.svg'
-import {ReactComponent as SearchIcon} from '../../assets/search-icon.svg'
 import {ReactComponent as CartIcon} from '../../assets/cart-icon.svg'
 
 import FooterComp from '../../components/footer/footer-comp'
@@ -16,9 +16,9 @@ import FooterComp from '../../components/footer/footer-comp'
 
 const Navigation = () => {
 
-    const {isCartOpen, setIsCartOpen} = useContext(CartContext);
+    const {isCartOpen, setIsCartOpen, cartItems} = useContext(CartContext);
 
-    const handleCartClose = () => {
+    const handleCartOpen = () => {
         setIsCartOpen(!isCartOpen);
     }
 
@@ -53,10 +53,14 @@ const Navigation = () => {
                     <Link to='/signin'>
                         <ProfileIcon/>
                     </Link>
-                    <CartIcon onClick={handleCartClose} className='cursor-pointer'/>
+                    <span className='relative cursor-pointer' onClick={handleCartOpen}>
+                        <CartIcon />
+                        <span className='absolute right-0 top-0 rounded-lg text-xs w-[15px] h-[15px] pb-[2px] flex justify-center items-center bg-blue text-white'>{cartItems.length}</span>
+                    </span>
                 </div>
             </div>
         </nav>
+        {/* {isCartOpen && <CheckoutComp className='transition-all'/>} */}
         <Outlet/>
         <FooterComp/>
     </div>

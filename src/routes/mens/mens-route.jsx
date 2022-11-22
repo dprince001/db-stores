@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { FilterContext } from "../../contexts/filter-context/filter-context";
 
 import FilterBarComp from "../../components/filter-bar/filter-bar-comp"
 
@@ -6,7 +8,10 @@ import ShopItemComp from "../../components/shop-item/shop-item-comp";
 import {ReactComponent as Spinner} from '../../assets/loading-icon.svg'
 
 const MensRoute = () => {
-  const {data, isPending, error} = useFetch('http://localhost:3000/items?category=mens');
+  const {filterPrice, filterColor, filterSorting, link} = useContext(FilterContext);
+
+  const {data, isPending, error} = useFetch(`http://localhost:3000/items?category=mens&price_lte=${filterPrice}&${link}`);
+
 
   return (
     <div>

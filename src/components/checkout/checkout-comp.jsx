@@ -10,7 +10,7 @@ import {ReactComponent as CancelIcon} from '../../assets/right-arrow-icon.svg'
 
 
 
-const CheckoutComp = () => {
+const CheckoutComp = ({color, size}) => {
 
     const {isCartOpen, setIsCartOpen, cartItems, cartTotal} = useContext(CartContext);
 
@@ -19,22 +19,24 @@ const CheckoutComp = () => {
     }
 
     const itemsInLink = cartItems.map(item => {
-        return `${item.itemInCartQuantity} ${item.title} at ₦${item.price} each`
+        return `${item.itemInCartQuantity} ${item.colorChosen} size ${size ? item.sizeChosen : ''}  ${item.title} at ₦${item.price} each`
     })
+
 
 
   return (
     <div>
-        <div className={`${isCartOpen ? 'w-full sm:w-2/4 lg:w-2/5 max-w-[450px]' : 'w-0'} transition-all min-h-screen bg-white border border-blue fixed top-0 z-20 right-0`}>
+        <div className={`${isCartOpen ? 'w-full sm:w-2/4 lg:w-2/5 max-w-[450px] min-w-[380px]' : 'w-0'} transition-all min-h-screen bg-white border border-blue fixed top-0 z-20 right-0`}>
             <div className="flex justify-between w-[85%] m-auto my-4 mb-6 items-center">
                 <CartIcon/>
                 <span className="text-lg font-mono italic">Cart</span>
                 <CancelIcon onClick={handleCartClose} className='cursor-pointer'/>
             </div>
+            {cartTotal < 20000 ? <p className="w-[85%] m-auto text-lightgreen italic">You are ₦{(20000 - cartTotal).toLocaleString()} away from free delivery</p> : <p className="w-[85%] m-auto text-lightgreen italic">Awesome! You get free delivery</p>}
             <div className='w-[85%] m-auto'>
                 {cartItems.length > 0 && 
                     <div className='w-full max-h-[340px] overflow-y-scroll'>
-                        {cartItems.map(item => <CheckoutItem obj={item} key={item.id} />)}
+                        {cartItems.map(item => <CheckoutItem obj={item} key={item.id} color={color} size={size}/>)}
                     </div>
                 }
             </div>

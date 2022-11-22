@@ -2,7 +2,7 @@ import { useState, createContext, useEffect } from "react";
 
 
 // helper functions
-const addItem = (cartItemArr, productToAdd) => {
+const addItem = (cartItemArr, productToAdd, colorChosen, sizeChosen) => {
     // function to add item to cart needs to check if item already exist in cart. if it does it increases the quantity otherwise adds the item if its not found in cart
 
     // check
@@ -10,11 +10,24 @@ const addItem = (cartItemArr, productToAdd) => {
 
     // if found, increase itemincartquantity and return the updated array
     if(findItem) {
-        return cartItemArr.map(item => item.id === productToAdd.id ? {...item, itemInCartQuantity: item.itemInCartQuantity + 1} : item)
+        // TODO: after checking that ID is present, check if the color and size chosen is same with previous same product
+
+        // const colPresent = cartItemArr.find(item => item.color.map(col => col !== colorChosen));
+
+        // if (colPresent) {
+        //     console.log(colorChosen)
+        //     console.log(productToAdd.color);
+        //     console.log('blabla')
+
+        
+        // return [...cartItemArr, { ...productToAdd, itemInCartQuantity: 3 }];
+        // }
+
+        return cartItemArr.map(item => item.id === productToAdd.id ? {...item, itemInCartQuantity: item.itemInCartQuantity + 1, colorChosen: colorChosen, sizeChosen: sizeChosen} : item)
     }
 
     // if item does not exist return a new Cart items array with new product item
-    return [...cartItemArr, {...productToAdd, itemInCartQuantity: 1 }];
+    return [...cartItemArr, {...productToAdd, itemInCartQuantity: 1, colorChosen: colorChosen, sizeChosen: sizeChosen}];
 }
 
 const removeItem = (cartItemArr, productToRemove) => {
@@ -52,6 +65,8 @@ export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
 
+
+
     // use useEffect to get totals everytime the cartItem changes
 
     useEffect(() => {
@@ -61,8 +76,8 @@ export const CartProvider = ({children}) => {
 
 
     // function to add item to cart needs to check if item already exist in cart. if it does it increases the quantity otherwise adds the item if its not found in cart
-    const addItemToCart = (productToAdd) => {
-        setCartItems(addItem(cartItems, productToAdd));
+    const addItemToCart = (productToAdd, colorChosen, sizeChosen) => {
+        setCartItems(addItem(cartItems, productToAdd, colorChosen, sizeChosen));
     }
 
     const removeItemFromCart = (productToRemove) => {
