@@ -12,20 +12,20 @@ import {ReactComponent as CancelIcon} from '../../assets/right-arrow-icon.svg'
 
 const CheckoutComp = () => {
 
-    const {isCartOpen, setIsCartOpen, cartItems, cartTotal} = useContext(CartContext);
+    const {isCartOpen, setIsCartOpen, cartItems, cartTotal, colorSel, sizeSel} = useContext(CartContext);
 
     const handleCartClose = () => {
         setIsCartOpen(!isCartOpen);
     }
 
     const itemsInLink = cartItems.map(item => {
-        return `${item.itemInCartQuantity} ${item.title} at ₦${item.price} each`
+        return `${item.itemInCartQuantity} ${item.colorSel} size ${sizeSel ? item.sizeSel : ''}  ${item.title} at ₦${item.price} each`
     })
 
 
   return (
     <div>
-        <div className={`${isCartOpen ? 'w-full sm:w-2/4 lg:w-2/5 max-w-[450px]' : 'w-0'} transition-all min-h-screen bg-white border border-blue fixed top-0 z-20 right-0`}>
+        <div className={`${isCartOpen ? 'w-full sm:w-2/4 lg:w-2/5 max-w-[450px] min-w-[350px]' : 'w-0'} transition-all min-h-screen bg-white border border-blue fixed top-0 z-20 right-0`} >
             <div className="flex justify-between w-[85%] m-auto my-4 mb-6 items-center">
                 <CartIcon/>
                 <span className="text-lg font-mono italic">Cart</span>

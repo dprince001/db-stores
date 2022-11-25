@@ -1,5 +1,6 @@
 
 import FilterBarComp from "../../components/filter-bar/filter-bar-comp"
+import CheckOutComp from '../../components/checkout/checkout-comp'
 
 import useFetch from "../../hooks/useFetch/useFetch"
 import ShopItemComp from "../../components/shop-item/shop-item-comp";
@@ -11,7 +12,7 @@ const MensRoute = () => {
   return (
     <div>
       <div className='w-[85%] mt-[20px] m-auto min-h-screen'>
-        <p className='font-medium font-sans text-4xl'>Men's</p>
+        <p className='font-medium font-sans max-sm:text-3xl text-4xl'>Men's</p>
         <FilterBarComp totalItems={data.length}/>
         {
           data && <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
@@ -23,6 +24,7 @@ const MensRoute = () => {
         {isPending && <span className="absolute left-[48%] top-[50%] animate-spin"><Spinner/></span>}
         {error && <p>{error}</p>}
       </div>
+      <CheckOutComp/>
     </div>
   )
 }
