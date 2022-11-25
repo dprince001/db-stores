@@ -13,6 +13,7 @@ const useFetch = (url) => {
         const data = await fetch(url);
         const result = await data.json();
         setData(result); 
+        // setData(result.items); 
         setIsPending(false);
       }
       response();
@@ -22,6 +23,8 @@ const useFetch = (url) => {
       setError(err.message);
     }
   }, [url])
+
+  console.log(data);
 
   return {data, isPending, error}
 }
