@@ -8,8 +8,8 @@ import {ReactComponent as DeleteIcon} from '../../assets/delete-icon.svg'
 
 
 
-const CheckoutItem = ({obj, color, size}) => {
-    const {title, id, itemInCartQuantity, price, imageUrl, } = obj;
+const CheckoutItem = ({obj}) => {
+    const {title, id, itemInCartQuantity, price, imageUrl, colorSel, quantity, sizeSel} = obj;
 
 
     const {addItemToCart, removeItemFromCart, deleteItemFromCart} = useContext(CartContext);
@@ -30,9 +30,9 @@ const CheckoutItem = ({obj, color, size}) => {
 
   return (
     <>
-        <div key={id} className={`w-full transition-all flex space-x-6 justify-between my-6`}>
+        <div key={id} className={`w-full transition-all flex space-x-4 justify-between my-6`}>
             <img src={imageUrl} alt="" className='max-w-[90px]'/>
-            <div className='w-full'>
+            <div className='w-full flex flex-col pr-5'>
                 <div className='flex justify-between align-items space-x-6'>
                     <div className="flex flex-col">
                         <span className="font-medium max-sm:text-sm">{title}</span>

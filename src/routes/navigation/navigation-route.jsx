@@ -4,17 +4,13 @@ import ReactRotatingText from 'react-rotating-text'
 
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/cart-context/cart-context'
-<<<<<<< Updated upstream
-=======
 import { NavDropdownContext } from '../../contexts/nav-context/nav-dropdown-context'
 // import CheckoutComp from '../../components/checkout/checkout-comp'
 
 import NavDropdownComp from '../../components/nav-dropdown/nav-dropdown-comp'
->>>>>>> Stashed changes
 
 
 import {ReactComponent as ProfileIcon} from '../../assets/user-icon.svg'
-import {ReactComponent as SearchIcon} from '../../assets/search-icon.svg'
 import {ReactComponent as CartIcon} from '../../assets/cart-icon.svg'
 import {ReactComponent as MenuIcon} from '../../assets/menu-icon.svg'
 
@@ -24,15 +20,11 @@ import FooterComp from '../../components/footer/footer-comp'
 
 const Navigation = () => {
 
-<<<<<<< Updated upstream
-    const {isCartOpen, setIsCartOpen} = useContext(CartContext);
-=======
     const {isCartOpen, setIsCartOpen, cartItems} = useContext(CartContext);
     const {isNavDropped, setIsNavDropped} = useContext(NavDropdownContext)
 
->>>>>>> Stashed changes
 
-    const handleCartClose = () => {
+    const handleCartOpen = () => {
         setIsCartOpen(!isCartOpen);
     }
 
@@ -71,15 +63,15 @@ const Navigation = () => {
                     <Link to='/signin'>
                         <ProfileIcon/>
                     </Link>
-                    <CartIcon onClick={handleCartClose} className='cursor-pointer'/>
+                    <span className='relative cursor-pointer' onClick={handleCartOpen}>
+                        <CartIcon />
+                        <span className='absolute right-0 top-0 rounded-lg text-xs w-[15px] h-[15px] pb-[2px] flex justify-center items-center bg-blue text-white'>{cartItems.length}</span>
+                    </span>
                 </div>
             </div>
         </nav>
-<<<<<<< Updated upstream
-=======
         <NavDropdownComp />
         {/* {isCartOpen && <CheckoutComp className='transition-all'/>} */}
->>>>>>> Stashed changes
         <Outlet/>
         <FooterComp/>
     </div>
