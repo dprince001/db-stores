@@ -9,20 +9,6 @@ import { useContext, useState } from "react";
 
 const ClickedProductRoute = () => {
     const {productId} = useParams();
-<<<<<<< Updated upstream
-    const {cartItems, addItemToCart} = useContext(CartContext)
-    const {data, isPending, error} = useFetch(`http://localhost:3000/items/${productId}`);
-
-    const {title, price, color, sizes} = data;
-
-
-    const [colorChosen, setColorChosen] = useState('');
-    const [sizeChosen, setSizeChosen] = useState('');
-
-    const handleAddItemToCart = (e) => {
-        e.preventDefault();
-        addItemToCart(data);
-=======
     const {addItemToCart, handCol, col, size, handSize, cartItems} = useContext(CartContext)
     const {data, isPending, error} = useFetch(`http://localhost:3000/items/${productId}`);
     // const [itemInCartQuantity, setItemInCartQuantity] = useState(0)
@@ -33,7 +19,6 @@ const ClickedProductRoute = () => {
         e.preventDefault();
         const newData = {...data, colorSel: col, sizeSel: size};
         addItemToCart(newData);
->>>>>>> Stashed changes
     }
 
 
@@ -59,12 +44,7 @@ const ClickedProductRoute = () => {
                     {color.map((col, index) => {
                         return(
                             <span key={index} className='mr-3'>
-<<<<<<< Updated upstream
-                                <input type='radio' name="color" required value={col} onClick={handleColorChange}/>
-                                
-=======
                                 <input type='radio' name="color"  required value={col} onClick={handCol}/>                               
->>>>>>> Stashed changes
                                 <span className="p-2 text-2xl font-light">{col}</span>
                             </span>
                         )
@@ -78,11 +58,7 @@ const ClickedProductRoute = () => {
                         Object.values(sizes).map((size, index) => {
                             return(
                                 <span key={index} className='mr-3'>
-<<<<<<< Updated upstream
-                                    <input type='radio' name="size" required onClick={handleSizeChange} value={size}/>
-=======
                                     <input type='radio' name="size" onClick={handSize} required value={size}/>
->>>>>>> Stashed changes
                                     <span className="p-2 text-2xl font-light">{size}</span>
                                 </span>
                             )
@@ -91,13 +67,6 @@ const ClickedProductRoute = () => {
                 </div>
                 : null
             }
-<<<<<<< Updated upstream
-            <input type='submit' value='ADD TO CART' className='block bg-blue border border-blue hover:bg-white hover:text-blue w-full font-medium text-sm text-white p-2 px-4 mt-8' onClick={handleAddItemToCart}/>
-        </form>
-
-        
-        <CheckoutComp />
-=======
             {available ?
                 // TODO: check if radios are checked before allowing click
                 <>
@@ -111,7 +80,6 @@ const ClickedProductRoute = () => {
         
         {/* <CheckoutComp color={colorChosen} size={sizes ? sizeChosen : undefined}/> */}
         <CheckoutComp/>
->>>>>>> Stashed changes
     </div>
   )
 }
