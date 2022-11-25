@@ -13,7 +13,11 @@ import {ReactComponent as Spinner} from '../../assets/loading-icon.svg'
 const Index = () => {
   const {filterPrice, filterColor, filterSorting, link} = useContext(FilterContext);
 
-  const {data, isPending, error} = useFetch(`http://localhost:3000/items?price_lte=${filterPrice}&${link}`);
+  // const {data, isPending, error} = useFetch(`http://localhost:3000/items?price_lte=${filterPrice}&${link}`);
+  const {data, isPending, error} = useFetch(`http://localhost:8000/items?price_lte=${filterPrice}&${link}`);
+
+  // const {data, isPending, error} = useFetch(`https://dprince001.github.io/db.json?price_lte=${filterPrice}&${link}`);
+  // console.log(data);
 
   
 

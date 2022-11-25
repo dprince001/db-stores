@@ -11,7 +11,7 @@ import CheckoutComp from "../../components/checkout/checkout-comp";
 const Accessories = () => {
   const {filterPrice, filterColor, filterSorting, link} = useContext(FilterContext);
 
-  const {data, isPending, error} = useFetch(`http://localhost:3000/items?category=accessories&price_lte=${filterPrice}&${link}`);
+  const {data, isPending, error} = useFetch(`http://localhost:8000/items?category=accessories&price_lte=${filterPrice}&${link}`);
 
   return (
     <div>

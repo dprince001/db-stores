@@ -11,7 +11,7 @@ import {ReactComponent as Spinner} from '../../assets/loading-icon.svg'
 const MensRoute = () => {
   const {filterPrice, filterColor, filterSorting, link} = useContext(FilterContext);
 
-  const {data, isPending, error} = useFetch(`http://localhost:3000/items?category=mens&price_lte=${filterPrice}&${link}`);
+  const {data, isPending, error} = useFetch(`http://localhost:8000/items?category=mens&price_lte=${filterPrice}&${link}`);
 
 
   return (
