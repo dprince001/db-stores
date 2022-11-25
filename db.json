@@ -59,10 +59,8 @@
       "imageUrl": "https://i.postimg.cc/7hGKDcM6/BCOCE002box.webp",
       "price": 2500,
       "sizes": {
-        "small": "sm",
-        "medium": "md",
-        "large": "l",
-        "extralarge": "xl"
+        "small": "small",
+        "big": "big"
       },
       "color": [
         "white",
@@ -133,7 +131,7 @@
         "small": "42",
         "medium": "43",
         "large": "44",
-        "extralarge": "45"
+        "extralarge": "46"
       },
       "color": [
         "brown",
@@ -185,9 +183,9 @@
     },
     {
       "id": "11",
-      "title": "Sherpa Half Zip Jacket",
-      "imageUrl": "https://i.postimg.cc/RZKVqZV1/WMNSRECYCLEDSHERPAHALFZIP-EGRET-201-384-20424-3351.webp",
-      "price": 8000,
+      "title": "Plaid Pants",
+      "imageUrl": "https://i.postimg.cc/hvD717hq/MENSPLAIDPANT-HAZELNUT-102-072-24632-2762.webp",
+      "price": 6000,
       "sizes": {
         "small": "sm",
         "medium": "md",
@@ -195,18 +193,18 @@
         "extralarge": "xl"
       },
       "color": [
-        "cream",
+        "brown",
         "black"
       ],
-      "quantity": 3,
-      "category": "womens",
+      "quantity": 7,
+      "category": "mens",
       "available": true,
-      "gender": "f"
+      "gender": "m"
     },
     {
       "id": "12",
-      "title": "Corona Flair Gown",
-      "imageUrl": "https://i.postimg.cc/gkpg1MLY/220505-UBB-Corona-Look-01-0352.webp",
+      "title": "Recycled Sherpa Zip Jacket",
+      "imageUrl": "https://i.postimg.cc/gJPhr7Wj/MENSRECYCLEDSHERPAFULLZIP-LAGOON-101-378-35325-1385.webp",
       "price": 12000,
       "sizes": {
         "small": "sm",
@@ -215,60 +213,8 @@
         "extralarge": "xl"
       },
       "color": [
-        "blue",
-        "black"
-      ],
-      "quantity": 1,
-      "category": "womens",
-      "available": true,
-      "gender": "f"
-    },
-    {
-      "id": "13",
-      "title": "Ceramic Bowls",
-      "imageUrl": "https://i.postimg.cc/x1HBLkmC/707-328-03613-S-4-CERAMICBOWLS-2-7e02b58b-09a5-4e89-929c-21252eabe44a.webp",
-      "price": 5000,
-      "color": [
-        "cream",
-        "black"
-      ],
-      "quantity": 5,
-      "category": "accessories",
-      "available": true
-    },
-    {
-      "id": "14",
-      "title": "Socks That Protect Oceans",
-      "imageUrl": "https://i.postimg.cc/7hGKDcM6/BCOCE002box.webp",
-      "price": 2500,
-      "sizes": {
-        "small": "sm",
-        "medium": "md",
-        "large": "l",
-        "extralarge": "xl"
-      },
-      "color": [
-        "white",
-        "black"
-      ],
-      "quantity": 7,
-      "category": "accessories",
-      "available": true
-    },
-    {
-      "id": "15",
-      "title": "Cargo Pants",
-      "imageUrl": "https://i.postimg.cc/PJjMsxx6/F21-Apparel-Selects-22.webp",
-      "price": 15000,
-      "sizes": {
-        "small": "sm",
-        "medium": "md",
-        "large": "l",
-        "extralarge": "xl"
-      },
-      "color": [
-        "ash",
-        "brown"
+        "grey",
+        "blue"
       ],
       "quantity": 1,
       "category": "mens",
@@ -276,9 +222,9 @@
       "gender": "m"
     },
     {
-      "id": "16",
-      "title": "Bucket Hat",
-      "imageUrl": "https://i.postimg.cc/3rcq6jCN/F22-Accessories-163.webp",
+      "id": "13",
+      "title": "Stripe Chamo ButtonDown Shirt",
+      "imageUrl": "https://i.postimg.cc/DyfqqRbb/MENSSTRIPECHAMOISCLOTHBUTTONDOWN-Heather-Grey-101-261-03925-1196.webp",
       "price": 5000,
       "sizes": {
         "small": "sm",
@@ -287,51 +233,110 @@
         "extralarge": "xl"
       },
       "color": [
-        "grey",
-        "black",
         "cream"
       ],
-      "quantity": 4,
-      "category": "accessories",
-      "available": false
+      "quantity": 5,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
     },
     {
-      "id": "17",
-      "title": "Insulated Steel Bottle",
-      "imageUrl": "https://i.postimg.cc/x1r4j0ZS/F22-Accessories-17.webp",
-      "price": 4500,
+      "id": "14",
+      "title": "Vintage Sweat Pants",
+      "imageUrl": "https://i.postimg.cc/xTsLggKp/MENSVINTAGESWEATSETPANT-SMOKYOCHRE-102-057-35125-1129.webp",
+      "price": 7500,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
       "color": [
-        "blue"
+        "brown",
+        "carmo green"
+      ],
+      "quantity": 7,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "15",
+      "title": "Revolution Carry Duffle Bag",
+      "imageUrl": "https://i.postimg.cc/MKGQcRh7/revolution-55-L-carry-duffle-814-058-35013-0106-e4af85b3-33fd-4202-989a-5f0b28e927b9.webp",
+      "price": 13000,
+      "color": [
+        "grey",
+        "carmo green"
       ],
       "quantity": 1,
       "category": "accessories",
       "available": true
     },
     {
-      "id": "18",
-      "title": "KRD Hero Shoe",
-      "imageUrl": "https://i.postimg.cc/DznpsxFj/KRDASW-HERO.webp",
-      "price": 20000,
+      "id": "16",
+      "title": "Off The Wall VANS",
+      "imageUrl": "https://i.postimg.cc/Kj8RMSsG/sk8mte2-black-leopard-5.webp",
+      "price": 12000,
       "sizes": {
         "small": "42",
-        "medium": "43",
+        "medium":  "43",
         "large": "44",
-        "extralarge": "45"
+        "extralarge": "46"
+      },
+      "color": [
+        "black",
+        "white"
+      ],
+      "quantity": 4,
+      "category": "mens",
+      "available": true,
+      "gender": "m"
+    },
+    {
+      "id": "17",
+      "title": "5 Inch Swink Trunk",
+      "imageUrl": "https://i.postimg.cc/Hkyj5t3y/united-by-blue-5-inch-swim-trunk-2.webp",
+      "price": 4500,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
+      },
+      "color": [
+        "orange"
+      ],
+      "quantity": 1,
+      "category": "mens",
+      "available": true,
+      "gender":"m"
+    },
+    {
+      "id": "18",
+      "title": "Recycled Wool Sweater",
+      "imageUrl": "https://i.postimg.cc/V6Gz2SDw/WMNSRECYCLEDWOOLFISHERMANSWEATER-SHORTBREAD-201-390-28824-2901.webp",
+      "price": 9000,
+      "sizes": {
+        "small": "sm",
+        "medium": "md",
+        "large": "l",
+        "extralarge": "xl"
       },
       "color": [
         "brown",
         "grey"
       ],
       "quantity": 2,
-      "category": "mens",
-      "available": false,
-      "gender": "m"
+      "category": "womens",
+      "available": true,
+      "gender": "f"
     },
     {
       "id": "19",
-      "title": "Organic Curduroy Shirt",
-      "imageUrl": "https://i.postimg.cc/brgk794J/MENSORGANICBLOCKEDCORDUROYOVERSHIRTHAZELNUT-104-062-24625-9365-1.webp",
-      "price": 7000,
+      "title": "Ruffle Sleeve Jumpsuit",
+      "imageUrl": "https://i.postimg.cc/5yrNQHCg/WMNSRUFFLESLEEVEJUMPSUIT-BLACK-216-190-02624-4958.webp",
+      "price": 7500,
       "sizes": {
         "small": "sm",
         "medium": "md",
@@ -339,32 +344,26 @@
         "extralarge": "xl"
       },
       "color": [
+        "black",
         "brown"
       ],
       "quantity": 5,
-      "category": "mens",
+      "category": "womens",
       "available": true,
-      "gender": "m"
+      "gender": "f"
     },
     {
       "id": "20",
-      "title": "Organic Pocket Tee",
-      "imageUrl": "https://i.postimg.cc/bwJ9j4yj/MENSORGANICFIELDGUIDEPOCKETTEESMOKYOCHRE101-347-35125-9896.webp",
-      "price": 3000,
-      "sizes": {
-        "small": "sm",
-        "medium": "md",
-        "large": "l",
-        "extralarge": "xl"
-      },
+      "title": "Classy Mugs",
+      "imageUrl": "https://i.postimg.cc/NMPd3YXS/F22-Accessories-75-3-c7504421-9f5f-460e-a508-b6232326c71c.webp",
+      "price": 1500,
       "color": [
-        "brown",
-        "blue"
+        "blue",
+        "gold"
       ],
       "quantity": 5,
-      "category": "mens",
-      "available": true,
-      "gender": "m"
+      "category": "accessories",
+      "available": true
     }
   ],
   "userEmails": [

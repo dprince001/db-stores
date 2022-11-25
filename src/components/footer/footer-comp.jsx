@@ -35,7 +35,7 @@ const FooterComp = () => {
 
   return (
     <div className="bg-skyblue mt-[100px] py-[40px]">
-        <div className="w-[85%] text-[#4C4C6E] m-auto w-screen grid gap-x-12 gap-y-8 grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+        <div className="w-[90%] text-[#4C4C6E] m-auto grid gap-x-12 gap-y-8 grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
             <div className=''>
                 <p className='mb-[10px]'>ABOUT</p>
                 <p className="text-sm mb-[15px] cursor-pointer hover:underline">Mission</p>
