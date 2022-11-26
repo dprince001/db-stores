@@ -38,6 +38,7 @@ const CheckoutComp = ({color, size}) => {
                     <div className='w-full max-h-[340px] overflow-y-scroll'>
                         {cartItems.map(item => <CheckoutItem obj={item} key={item.id} color={color} size={size}/>)}
                     </div>
+                    
                 }
             </div>
 
@@ -45,7 +46,7 @@ const CheckoutComp = ({color, size}) => {
                 <div className="absolute z-20 bottom-[50px] w-full">
                     <div className='w-[90%] m-auto flex justify-between'>
                         <span className='font-medium'>ESTIMATED TOTAL:</span>
-                        <span className='font-medium'>₦{cartTotal.toLocaleString()}.00</span>
+                        {cartTotal && <span className='font-medium'>₦{cartTotal.toLocaleString()}.00</span>}
                     </div>
                     <a href={`https://wa.me/+2349077006946?text=Hello, I will like to order for ${itemsInLink} and products total = ₦${cartTotal}`} target='_blank' className='block bg-blue border border-blue hover:bg-white hover:text-blue w-[90%] rounded-full text-white p-2 px-4 m-auto mt-3 font-medium text-sm text-center'>CHECKOUT NOW</a>
                     <p className="underline text-center text-lg mt-3 cursor-pointer" onClick={() => setIsCartOpen(false)}>Continue Shopping</p>

@@ -1,5 +1,4 @@
 import { useState, createContext, useEffect } from "react";
-// import { useLocation } from "react-router-dom";
 
 
 // helper functions
@@ -67,89 +66,66 @@ export const CartContext = createContext({
   col: "",
   handCol: () => {},
   size: "",
-  handSize: () => {},
-//   itemInCartQuantity: 0, 
-//   setItemInCartQuantity: () => {}
+  handSize: () => {}
 });
 
 
 export const CartProvider = ({children}) => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
 
-    const [isCartOpen, setIsCartOpen] = useState(false);
-    const [cartItems, setCartItems] = useState([]);
-    const [cartTotal, setCartTotal] = useState(0);
-
-    // const [itemInCartQuantity, setItemInCartQuantity] = useState(0);
-
-
-
-    // use useEffect to get totals everytime the cartItem changes
-    useEffect(() => {
-        const total = cartItems.reduce((prev, cur) => prev + cur.itemInCartQuantity * cur.price, 0);
-        setCartTotal(total);
-    }, [cartItems]);
-
-    // const location = useLocation()
-
-    // const [path, setPath] = useState(location.pathname);
-
-    // useEffect(() => {
-    //     console.log(path)
-    //     setPath(location.pathname);
-    //     setIsCartOpen(false);
-    // }, [path])
-
-    
-    // console.log(isCartOpen);
-
-
-    const [col, setCol] = useState('');
-    const [size, setSize] = useState("");
-
-    const handCol = (e) => {
-      setCol(e.target.value);
-    };
-    const handSize = (e) => {
-      setSize(e.target.value);
-    };
-
-    // setItemInCartQuantity(productToAdd.itemInCartQuantity);
-    
-    
-    // function to add item to cart needs to check if item already exist in cart. if it does it increases the quantity otherwise adds the item if its not found in cart
-    const addItemToCart = (productToAdd) => {
-        setCartItems(addItem(cartItems, productToAdd, col, size));
+  // use useEffect to get totals everytime the cartItem changes
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      const total = cartItems.reduce(
+        (prev, cur) => prev + cur.itemInCartQuantity * cur.price,
+        0
+      );
+      setCartTotal(total);
     }
-    
-    // console.log(cartItems)
+  }, [cartItems]);
 
 
 
 
-    const removeItemFromCart = (productToRemove) => {
-        setCartItems(removeItem(cartItems, productToRemove));
-    }
+  const [col, setCol] = useState("");
+  const [size, setSize] = useState("");
 
-    const deleteItemFromCart = (productToDelete) => {
-        setCartItems(deleteItem(cartItems, productToDelete))
-    }
+  const handCol = (e) => {
+    setCol(e.target.value);
+  };
+  const handSize = (e) => {
+    setSize(e.target.value);
+  };
 
-    // console.log(cartItems);
 
-    // const value = {isCartOpen, cartItems, cartTotal, setIsCartOpen,addItemToCart, removeItemFromCart, deleteItemFromCart};
-    const value = {
-      isCartOpen,
-      cartItems,
-      cartTotal,
-      setIsCartOpen,
-      addItemToCart, 
-      removeItemFromCart,
-      deleteItemFromCart, 
-      col, 
-      handCol, 
-      size, 
-      handSize, 
-    };
+  const addItemToCart = (productToAdd) => {
+    setCartItems(addItem(cartItems, productToAdd, col, size));
+  };
 
-    return <CartContext.Provider value={value}>{children}</CartContext.Provider>
+  const removeItemFromCart = (productToRemove) => {
+    setCartItems(removeItem(cartItems, productToRemove));
+  };
+
+  const deleteItemFromCart = (productToDelete) => {
+    setCartItems(deleteItem(cartItems, productToDelete));
+  };
+
+
+  const value = {
+    isCartOpen,
+    cartItems,
+    cartTotal,
+    setIsCartOpen,
+    addItemToCart,
+    removeItemFromCart,
+    deleteItemFromCart,
+    col,
+    handCol,
+    size,
+    handSize,
+  };
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
