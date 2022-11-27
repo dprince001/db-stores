@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import TextInputField from "../../components/text-input-field/text-input-field"
 
+import CheckoutComp from "../../components/checkout/checkout-comp"
+
 
 const SignUpRoute = () => {
 
@@ -13,6 +15,7 @@ const SignUpRoute = () => {
           <TextInputField type='password' name='password' placeholder='Password'/>
           <button className='block bg-blue border border-blue hover:bg-white hover:text-blue w-[250px] rounded-full text-white p-2 px-4 m-auto mt-8'>Create</button>
         </div>
+        <CheckoutComp/>
     </div>
   )
 }

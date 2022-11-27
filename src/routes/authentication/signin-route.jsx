@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import TextInputField from "../../components/text-input-field/text-input-field"
 
+import CheckoutComp from "../../components/checkout/checkout-comp"
+
 
 const SignInRoute = () => {
 
@@ -16,6 +18,7 @@ const SignInRoute = () => {
             <Link to='/signup'>Create account</Link>
           </button>
         </div>
+        <CheckoutComp/>
     </div>
   )
 }
