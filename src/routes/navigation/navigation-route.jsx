@@ -43,7 +43,7 @@ const Navigation = () => {
         </div>
         <nav className='py-[20px] z-10 sticky top-[30px] bg-white'>
             <div className='flex items-center justify-between w-[85%] m-auto'>
-            <MenuIcon className='hidden max-md:block' onClick={handleNavDropped}/>
+            <MenuIcon className='hidden max-md:block cursor-pointer' onClick={handleNavDropped}/>
                 <Link to='/'>
                     <span className='font-semibold text-2xl md:text-3xl font-serif'>dp stores</span>
                 </Link>

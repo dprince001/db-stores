@@ -1,45 +1,42 @@
 import { createContext, useState } from "react";
 
 export const FilterContext = createContext({
-  filterPrice: 1000000000,
-  setFilterPrice: () => {},
-  filterSorting: "",
-  correctVar: '',
-  setCorrectVar: () => {},
-  setFilterSorting: () => {},
-  handlePriceChange: () => {},
-  handleSortChange: () => {},
+  filterCategory: '', 
+  filterPrice: 0,
+  handleFilterCategory: () => {},
+  handleFilterPrice: () => {},
+  handleFilterID: () => {}
 });
 
-export const FilterProvider = ({children}) => {
+export const FilterProvider = ({ children }) => {
 
-
-    const [filterPrice, setFilterPrice] = useState(1000000000);
-    const [filterSorting, setFilterSorting] = useState("");
-
-    const handlePriceChange = (e) => {
-        setFilterPrice(e.target.value)
+  const handleFilterCategory = (cartItemArr, filterby) => {
+    if (cartItemArr) {
+      return cartItemArr.filter((item) => item.category === filterby);
     }
-    const handleSortChange = (e) => {
-      setFilterSorting(e.target.value);
-    };
+  };
 
-    const getSortType = () => {
-      let correctVar;
-      if (filterSorting === "letasc") 
-        correctVar = `_sort=title&_order=asc`;
-      else if (filterSorting === "letdesc")
-        correctVar = `_sort=title&_order=desc`;
-      else if (filterSorting === "numdesc")
-        correctVar = `_sort=price&_order=asc`;
-      else if (filterSorting === "numasc")
-        correctVar = `_sort=price&_order=desc`;
-      return correctVar;
+  const handleFilterPrice = (cartArr, price) => {
+    if (cartArr) {
+      return cartArr.filter((item) => item.price <= price);
+    } 
+  }
+
+  const handleFilterID = (cartArr, id) => {
+    if (cartArr) {
+      // return cartArr.filter(item => item.id === id);
+      return cartArr.find((item) => item.id === id);
     }
+  }
 
-    const link = getSortType();
 
-    const value = {filterPrice, filterSorting, link, handlePriceChange, handleSortChange}
+  const value = {
+    handleFilterPrice,
+    handleFilterCategory,
+    handleFilterID
+  };
 
-    return <FilterContext.Provider value={value}>{children}</FilterContext.Provider>
-}
+  return (
+    <FilterContext.Provider value={value}>{children}</FilterContext.Provider>
+  );
+};

@@ -7,8 +7,8 @@ const FilterBarComp = ({totalItems}) => {
 
 
   return (
-    <div className="max-md:flex-col flex items-center justify-between max-md:items-start mt-[30px]">
-      <div>
+    <div className="max-md:flex-col flex items-center justify-between max-md:items-start">
+      {/* <div>
         <span className="max-sm:text-sm">Filter:</span> 
         <select name="price" id="price-range" className="mx-[20px] text-sm max-sm:text-xs min-w-[125px]" onChange={handlePriceChange}>
             <option selected value='0' disabled>Filter by price</option>
@@ -17,9 +17,9 @@ const FilterBarComp = ({totalItems}) => {
             <option value="20000">Less than N20000</option>
             <option value="50000">Less than N50000</option>
         </select>
-      </div>
+      </div> */}
 
-      <div className="flex max-md:w-full">
+      {/* <div className="flex max-md:w-full">
         <span className="max-sm:text-sm">Sort by:</span>
         <select name="sorting" className="text-sm max-sm:text-xs mx-[20px] min-w-[130px]" onChange={handleSortChange}>
             <option selected value='' disabled>Featured</option>
@@ -29,7 +29,8 @@ const FilterBarComp = ({totalItems}) => {
             <option value="numasc">Price high to low</option>
         </select>
         <span className="ml-auto max-sm:text-xs">{totalItems} products</span>
-      </div>
+      </div> */}
+      <span className="ml-auto max-sm:text-xs">{totalItems} products</span>
 
     </div>
   )
