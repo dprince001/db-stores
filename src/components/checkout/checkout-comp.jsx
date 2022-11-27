@@ -10,17 +10,23 @@ import {ReactComponent as CancelIcon} from '../../assets/right-arrow-icon.svg'
 
 
 
-const CheckoutComp = ({color, size}) => {
+const CheckoutComp = () => {
 
-    const {isCartOpen, setIsCartOpen, cartItems, cartTotal, colorSel, sizeSel} = useContext(CartContext);
+    const {isCartOpen, setIsCartOpen, cartItems, cartTotal, col, size} = useContext(CartContext);
 
     const handleCartClose = () => {
         setIsCartOpen(!isCartOpen);
     }
 
-    const itemsInLink = cartItems.map(item => {
-        return `${item.itemInCartQuantity} ${item.colorSel} size ${sizeSel ? item.sizeSel : ''}  ${item.title} at ₦${item.price} each`
-    })
+    let itemsInLink;
+
+    if (cartItems) {
+        itemsInLink = cartItems.map(item => `${item.itemInCartQuantity} ${item.colorSel} ${item.sizeSel} ${item.title} at ₦${item.price} each`
+        )
+    }
+
+    // console.log(size);
+
 
 
 
@@ -34,9 +40,9 @@ const CheckoutComp = ({color, size}) => {
             </div>
             {cartTotal < 20000 ? <p className="w-[85%] m-auto text-lightgreen italic">You are ₦{(20000 - cartTotal).toLocaleString()} away from free delivery</p> : <p className="w-[85%] m-auto text-lightgreen italic">Awesome! You get free delivery</p>}
             <div className='w-[85%] m-auto'>
-                {cartItems.length > 0 && 
+                {cartItems && 
                     <div className='w-full max-h-[340px] overflow-y-scroll'>
-                        {cartItems.map(item => <CheckoutItem obj={item} key={item.id} color={color} size={size}/>)}
+                        {cartItems.map(item => <CheckoutItem obj={item} key={item.id} color={col} size={size}/>)}
                     </div>
                     
                 }

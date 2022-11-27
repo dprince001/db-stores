@@ -39,7 +39,7 @@ const ClickedProductRoute = () => {
     let itemInCartQuantity = 0;
 
     // {const ele = cartItems.find(item => item.id === data.id);
-    {cartItems.length > 0 && cartItems.map(item => item.id === product.id ? itemInCartQuantity = item.itemInCartQuantity : item)}
+    {cartItems.length > 0 && cartItems.map(item => item.id === productId ? itemInCartQuantity = item.itemInCartQuantity : item)}
 
     const navigate = useNavigate();
 

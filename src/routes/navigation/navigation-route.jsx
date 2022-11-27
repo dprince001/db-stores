@@ -65,7 +65,7 @@ const Navigation = () => {
                     </Link>
                     <span className='relative cursor-pointer' onClick={handleCartOpen}>
                         <CartIcon />
-                        <span className='absolute right-0 top-0 rounded-lg text-xs w-[15px] h-[15px] pb-[2px] flex justify-center items-center bg-blue text-white'>{cartItems.length}</span>
+                        {<span className='absolute right-0 top-0 rounded-lg text-xs w-[15px] h-[15px] pb-[2px] flex justify-center items-center bg-blue text-white'>{cartItems.length}</span>}
                     </span>
                 </div>
             </div>

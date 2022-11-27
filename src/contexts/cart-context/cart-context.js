@@ -32,10 +32,14 @@ const addItem = (cartItemArr, productToAdd, col, size) => {
       ...cartItemArr,
       {
         ...productToAdd,
-        itemInCartQuantity: 1
+        itemInCartQuantity: 1, 
+        colorSel: col,
+        sizeSel: size
       }
     ];
 }
+
+// console.log()
 
 const removeItem = (cartItemArr, productToRemove) => {
     // check if the product to remove actually exists in the array
@@ -77,7 +81,7 @@ export const CartProvider = ({children}) => {
 
   // use useEffect to get totals everytime the cartItem changes
   useEffect(() => {
-    if (cartItems.length > 0) {
+    if (cartItems) {
       const total = cartItems.reduce(
         (prev, cur) => prev + cur.itemInCartQuantity * cur.price,
         0
@@ -111,6 +115,8 @@ export const CartProvider = ({children}) => {
   const deleteItemFromCart = (productToDelete) => {
     setCartItems(deleteItem(cartItems, productToDelete));
   };
+
+  console.log(cartItems);
 
 
   const value = {
